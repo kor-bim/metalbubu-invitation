@@ -9,7 +9,13 @@ module.exports = {
     './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      screens: {
+        xxs: '375px', // 375px 이하의 초소형 기기 (아이폰 SE, 갤럭시 A 시리즈)
+        xs: '450px', // 450px 이하의 소형 기기
+        'sm-custom': '550px'
+      }
+    }
   },
   darkMode: 'class',
   plugins: [heroui()]
