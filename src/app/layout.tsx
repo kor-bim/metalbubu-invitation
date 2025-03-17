@@ -18,24 +18,17 @@ export const metadata: Metadata = {
     title: '⚡ 드디어 결혼합니다! 헤드뱅잉 하러 오실 거죠? 🤘',
     description:
       '2025년 5월 17일, 저희 밴드 인생의 가장 중요한 공연(?)이 열립니다! 함께 소리 지르고 축하해 주세요! 🎸🔥',
-    url: 'https://your-wedding-invitation.com',
+    url: 'https://invitation.metalbubu.life',
     siteName: '🔥 The Metal Wedding 🔥',
     images: [
       {
-        url: 'https://your-wedding-invitation.com/metal-wedding.jpg',
+        url: 'https://invitation.metalbubu.life/og-img.png',
         width: 1200,
         height: 630,
         alt: '청첩장 썸네일'
       }
     ],
     type: 'website'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '⚡ 드디어 결혼합니다! 헤드뱅잉 하러 오실 거죠? 🤘',
-    description:
-      '2025년 5월 17일, 저희 밴드 인생의 가장 중요한 공연(?)이 열립니다! 함께 소리 지르고 축하해 주세요! 🎸🔥',
-    images: ['https://your-wedding-invitation.com/metal-wedding.jpg']
   }
 }
 
