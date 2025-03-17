@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Image } from '@heroui/image'
+import Image from 'next/image'
 import { Modal, ModalContent, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
 import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
@@ -11,16 +11,16 @@ import { motion } from 'framer-motion'
 
 // **이미지 리스트**
 const pictures = [
-  { src: '/main-picture/03-1-2_22.webp', alt: '03-1-2_22', width: 1920, height: 1080 },
-  { src: '/main-picture/05-2_17.webp', alt: '05-2_17', width: 1920, height: 1080 },
-  { src: '/main-picture/01-1_24.webp', alt: '01-1_24', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/02-1qq1_21.webp', alt: '02-1qq1_21', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/02-1qq2_23.webp', alt: '02-1qq2_23', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/03-1-1_20.webp', alt: '03-1-1_20', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/04-1-1_18.webp', alt: '04-1-1_18', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/04-1-2_19.webp', alt: '04-1-2_19', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/05-1_16.webp', alt: '05-1_16', orientation: 'portrait', width: 1080, height: 1920 },
-  { src: '/main-picture/06-1_15.webp', alt: '06-1_15', orientation: 'landscape', width: 1920, height: 1080 },
+  { src: '/main-picture/5_land.webp', alt: '03-1-2_22', width: 1920, height: 1080 },
+  { src: '/main-picture/9_land.webp', alt: '05-2_17', width: 1920, height: 1080 },
+  { src: '/main-picture/1.webp', alt: '01-1_24', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/2.webp', alt: '02-1qq1_21', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/3.webp', alt: '02-1qq2_23', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/4.webp', alt: '03-1-1_20', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/6.webp', alt: '04-1-1_18', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/7.webp', alt: '04-1-2_19', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/8.webp', alt: '05-1_16', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/10_land.webp', alt: '06-1_15', orientation: 'landscape', width: 1920, height: 1080 },
   { src: '/main-picture/07-1-1_13.webp', alt: '07-1-1_13', orientation: 'portrait', width: 1080, height: 1920 },
   { src: '/main-picture/07-1-2_14.webp', alt: '07-1-1_13', orientation: 'portrait', width: 1080, height: 1920 },
   { src: '/main-picture/08-1-2_12.webp', alt: '08-1-2_12', orientation: 'portrait', width: 1080, height: 1920 },
@@ -56,7 +56,7 @@ export const PictureSection = () => {
                 onOpen()
               }}
             >
-              <Image isBlurred src={picture.src} alt={picture.alt} className="object-cover w-full" />
+              <Image src={picture.src} alt={picture.alt} className="object-cover w-full" />
             </Card>
           ))}
         </div>
