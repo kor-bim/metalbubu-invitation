@@ -7,6 +7,7 @@ import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
 import { Icon } from '@iconify/react'
 import { Gallery } from './gallery'
+import { motion } from 'framer-motion'
 
 // **이미지 리스트**
 const pictures = [
@@ -53,22 +54,32 @@ export const PictureSection = () => {
           ))}
         </div>
 
-        <div className="w-full columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {pictures.slice(2, showAll ? pictures.length : 6).map((picture, index) => (
-            <Card
-              fullWidth
-              key={index}
-              isHoverable
-              isPressable
-              onPress={() => {
-                setSelectedIndex(index + 2)
-                onOpen()
-              }}
-            >
-              <Image isBlurred src={picture.src} alt={picture.alt} />
-            </Card>
-          ))}
-        </div>
+        {/* 갤러리 (Framer Motion 활용) */}
+        <motion.div
+          className="w-full overflow-hidden"
+          initial={{ height: 250 }}
+          animate={{ height: showAll ? 'auto' : 250 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+        >
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            {pictures.slice(2).map((picture, index) => (
+              <Card
+                fullWidth
+                key={index + 2}
+                isHoverable
+                isPressable
+                onPress={() => {
+                  setSelectedIndex(index + 2)
+                  onOpen()
+                }}
+              >
+                <Image src={picture.src} alt={picture.alt} />
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* 더보기 버튼 */}
         {!showAll && (
           <div className="relative w-full flex flex-col items-center justify-center z-20">
             <div className="absolute bottom-full w-full h-36 bg-[linear-gradient(0deg,rgba(250,250,250,1)_0%,rgba(250,250,250,0.55)_60%,rgba(250,250,250,0.5)_73%,rgba(250,250,250,0.25)_83%,rgba(250,250,250,0)_100%)]"></div>
@@ -82,6 +93,8 @@ export const PictureSection = () => {
           </div>
         )}
       </div>
+
+      {/* 모달 */}
       {selectedIndex !== null && (
         <Modal size="full" isOpen={isOpen} onOpenChange={onOpenChange} classNames={{ closeButton: 'z-50' }}>
           <ModalContent>
