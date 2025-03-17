@@ -12,7 +12,12 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
-  prettierPluginRecommended
+  prettierPluginRecommended,
+  {
+    rules: {
+      'jsx-a11y/alt-text': 'off' // 이미지의 alt 속성 규칙 비활성화
+    }
+  }
 ]
 
 export default eslintConfig

@@ -2,7 +2,7 @@
 
 import { Image } from '@heroui/image'
 import { Link } from '@heroui/link'
-import { Button } from '@heroui/button'
+import { Button, ButtonGroup } from '@heroui/button'
 import { KakaoMapIcon, NaverMapIcon, TmapIcon } from '@/components/icons/essential'
 import { Snippet } from '@heroui/snippet'
 
@@ -40,14 +40,13 @@ export const MapSection = () => {
         >
           <Image src="/which.png" classNames={{ wrapper: 'w-full !max-w-full' }} className="map w-full object-cover" />
         </Link>
-        <div className="w-full flex items-center justify-between">
+        <ButtonGroup fullWidth variant="shadow">
           <Button
             as={Link}
             isExternal
             href="https://tmap.life/7ab28f4e"
             startContent={<TmapIcon />}
             size="lg"
-            variant="shadow"
             color="primary"
           >
             T-맵
@@ -58,8 +57,7 @@ export const MapSection = () => {
             href="https://naver.me/FCA8TiOq"
             startContent={<NaverMapIcon />}
             size="lg"
-            variant="shadow"
-            color="primary"
+            color="success"
           >
             네이버
           </Button>
@@ -69,12 +67,10 @@ export const MapSection = () => {
             href="https://map.kakao.com/?from=roughmap&amp;eName=%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%EC%97%91%EC%8A%A4%ED%8F%AC%EB%A1%9C123%EB%B2%88%EA%B8%B8%2055&amp;eX=588113.0000000026&amp;eY=799878.0000000005"
             startContent={<KakaoMapIcon />}
             size="lg"
-            variant="shadow"
-            color="primary"
           >
             카카오
           </Button>
-        </div>
+        </ButtonGroup>
       </div>
     </div>
   )
