@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Image } from '@heroui/image'
+import Image from 'next/image'
 import { Modal, ModalContent, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
 import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
@@ -11,22 +11,29 @@ import { motion } from 'framer-motion'
 
 // **이미지 리스트**
 const pictures = [
-  { src: '/main-picture/03-1-2.jpg', alt: '03-1-2' },
-  { src: '/main-picture/05-2.jpg', alt: '05-2' },
-  { src: '/main-picture/01-1.jpg', alt: '01-1', orientation: 'portrait' },
-  { src: '/main-picture/02-1qq1.jpg', alt: '02-1qq1', orientation: 'portrait' },
-  { src: '/main-picture/02-1qq2.jpg', alt: '02-1qq2', orientation: 'portrait' },
-  { src: '/main-picture/04-1-1.jpg', alt: '04-1-1', orientation: 'portrait' },
-  { src: '/main-picture/07-1-1.jpg', alt: '07-1-1', orientation: 'portrait' },
-  { src: '/main-picture/09-1-2.jpg', alt: '09-1-2', orientation: 'portrait' },
-  { src: '/main-picture/13-1.jpg', alt: '13-1', orientation: 'landscape' },
-  { src: '/main-picture/08-1-1.jpg', alt: '08-1-1', orientation: 'portrait' },
-  { src: '/main-picture/06-1.jpg', alt: '06-1', orientation: 'landscape' },
-  { src: '/main-picture/10-1-2.jpg', alt: '10-1-2', orientation: 'portrait' },
-  { src: '/main-picture/11-1.jpg', alt: '11-1', orientation: 'portrait' },
-  { src: '/main-picture/11-2.jpg', alt: '11-2', orientation: 'landscape' },
-  { src: '/main-picture/12-1-1.jpg', alt: '12-1-1', orientation: 'portrait' },
-  { src: '/main-picture/12-1-3.jpg', alt: '12-1-3', orientation: 'portrait' }
+  { src: '/main-picture/03-1-2_22.webp', alt: '03-1-2_22', width: 1920, height: 1080 },
+  { src: '/main-picture/05-2_17.webp', alt: '05-2_17', width: 1920, height: 1080 },
+  { src: '/main-picture/01-1_24.webp', alt: '01-1_24', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/02-1qq1_21.webp', alt: '02-1qq1_21', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/02-1qq2_23.webp', alt: '02-1qq2_23', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/03-1-1_20.webp', alt: '03-1-1_20', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/04-1-1_18.webp', alt: '04-1-1_18', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/04-1-2_19.webp', alt: '04-1-2_19', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/05-1_16.webp', alt: '05-1_16', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/06-1_15.webp', alt: '06-1_15', orientation: 'landscape', width: 1920, height: 1080 },
+  { src: '/main-picture/07-1-1_13.webp', alt: '07-1-1_13', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/07-1-2_14.webp', alt: '07-1-1_13', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/08-1-2_12.webp', alt: '08-1-2_12', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/09-1-1_9.webp', alt: '09-1-1_9', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/09-1-2_11.webp', alt: '09-1-2_11', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/10-1-1_7.webp', alt: '10-1-1_7', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/10-1-2_8.webp', alt: '10-1-2_8', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/11-1_5.webp', alt: '11-1_5', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/11-2_6.webp', alt: '11-2_6', orientation: 'landscape', width: 1920, height: 1080 },
+  { src: '/main-picture/12-1-1_2.webp', alt: '12-1-1_2', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/12-1-2_3.webp', alt: '12-1-2_3', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/12-1-3_4.webp', alt: '12-1-3_4', orientation: 'portrait', width: 1080, height: 1920 },
+  { src: '/main-picture/13-1_1.webp', alt: '13-1_1', orientation: 'landscape', width: 1920, height: 1080 }
 ]
 
 export const PictureSection = () => {
@@ -49,7 +56,7 @@ export const PictureSection = () => {
                 onOpen()
               }}
             >
-              <Image isBlurred src={picture.src} alt={picture.alt} className="object-cover w-full" />
+              <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
             </Card>
           ))}
         </div>
@@ -73,7 +80,7 @@ export const PictureSection = () => {
                   onOpen()
                 }}
               >
-                <Image src={picture.src} alt={picture.alt} />
+                <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
               </Card>
             ))}
           </div>
