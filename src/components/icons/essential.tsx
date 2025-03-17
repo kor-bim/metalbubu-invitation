@@ -1,6 +1,6 @@
 export const TmapIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
       <g clipPath="url(#clip0_26_10)">
         <mask id="mask0_26_10" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
           <path d="M0 0H32V32H0V0Z" fill="white" />
@@ -51,7 +51,7 @@ export const TmapIcon = () => {
 
 export const NaverMapIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
       <rect width="32" height="32" fill="url(#pattern0_26_19)" />
       <defs>
         <pattern id="pattern0_26_19" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -71,7 +71,7 @@ export const NaverMapIcon = () => {
 
 export const KakaoMapIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 450.00001 449.99999">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 450.00001 449.99999">
       <defs>
         <clipPath id="a">
           <path d="M736.578 395.462h96.48v-171.72h-96.48z" />
