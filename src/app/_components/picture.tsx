@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
+import { Image } from '@heroui/image'
 import { Modal, ModalContent, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
 import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
@@ -56,7 +56,7 @@ export const PictureSection = () => {
                 onOpen()
               }}
             >
-              <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
+              <Image isBlurred src={picture.src} alt={picture.alt} className="object-cover w-full" />
             </Card>
           ))}
         </div>
@@ -80,7 +80,7 @@ export const PictureSection = () => {
                   onOpen()
                 }}
               >
-                <Image src={picture.src} alt={picture.alt} width={picture.width} height={picture.height} />
+                <Image src={picture.src} alt={picture.alt} />
               </Card>
             ))}
           </div>
