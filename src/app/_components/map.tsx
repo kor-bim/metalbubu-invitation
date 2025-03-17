@@ -29,8 +29,13 @@ export const MapSection = () => {
 
       <div className="flex flex-col items-center justify-center">
         <span className="text-lg">{'< 대중교통 >'}</span>
-        <span className="text-lg mt-2">지하철 &#39;정부청사역&#39; 4번 출구 앞 버스정류장에서</span>
-        <span className="text-lg">618번 버스 탑승 후 &#39;스마트시티 5단지&#39;에서 하차</span>
+        <span className="text-sm mt-2 text-default-500">
+          지하철 <u className="text-foreground font-semibold">정부청사역 4번 출구</u> 앞 버스정류장에서
+        </span>
+        <span className="text-sm text-default-500">
+          <u className="text-foreground font-semibold">618번</u> 버스 탑승 후{' '}
+          <u className="text-foreground font-semibold">스마트시티 5단지</u>에서 하차
+        </span>
       </div>
       <div className="w-full flex flex-col items-center justify-center gap-4">
         <Link
