@@ -1,1 +1,1 @@
-![wedding-invitation.png](draft.png)
+![draft.png](draft.png)
