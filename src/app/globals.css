@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@layer base {*/
-/*    html, body {*/
-/*        font-size: 4.445vmin;*/
-/*    }*/
-/*}*/
+
+@layer base {
+    /*html, body {*/
+    /*    font-size: 4.445vmin;*/
+    /*}*/
+    code, kbd, samp, pre {
+        font-family: pretendard, pretendard Fallback, sans-serif;
+    }
+}
