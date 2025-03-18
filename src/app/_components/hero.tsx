@@ -1,4 +1,4 @@
-import { TitleIcon } from '@/components/icons/title'
+import { TitleIcon } from '@/components/essential'
 import Image from 'next/image'
 import titleImg from '@public/title.webp'
 import heroImg from '@public/hero.webp'

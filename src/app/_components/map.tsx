@@ -3,7 +3,7 @@
 import { Image } from '@heroui/image'
 import { Link } from '@heroui/link'
 import { Button, ButtonGroup } from '@heroui/button'
-import { KakaoMapIcon, NaverMapIcon, TmapIcon } from '@/components/icons/essential'
+import { KakaoMapIcon, NaverMapIcon, TmapIcon } from '@/components/essential'
 import { Snippet } from '@heroui/snippet'
 
 export const MapSection = () => {
