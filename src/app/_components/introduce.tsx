@@ -34,10 +34,10 @@ export const IntroduceSection = () => {
           </span>
         </div>
         <div className="relative w-full">
-          <Image src={introduceImg} alt="introduceImg" className="w-full h-auto object-contain" />
+          <Image src={introduceImg} alt="introduceImg" className="w-full h-auto object-contain" priority />
         </div>
         <div className="absolute bottom-10 left-[50%] -translate-x-1/2 z-20 w-[70%]">
-          <Image src={addressImg} alt="address" />
+          <Image src={addressImg} alt="address" priority />
         </div>
       </div>
     </div>
