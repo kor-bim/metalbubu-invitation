@@ -1,10 +1,11 @@
 'use client'
 
-import { Image } from '@heroui/image'
+import Image from 'next/image'
 import { Link } from '@heroui/link'
 import { Button, ButtonGroup } from '@heroui/button'
 import { KakaoMapIcon, NaverMapIcon, TmapIcon } from '@/components/essential'
 import { Snippet } from '@heroui/snippet'
+import mapImg from '@public/which.webp'
 
 export const MapSection = () => {
   return (
@@ -39,11 +40,11 @@ export const MapSection = () => {
       </div>
       <div className="w-full flex flex-col items-center justify-center gap-4">
         <Link
-          className="w-full"
+          className="w-full flex items-center justify-center"
           isExternal
           href="https://map.kakao.com/?urlX=588113.0000000026&amp;urlY=799878.0000000005&amp;name=%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%EC%97%91%EC%8A%A4%ED%8F%AC%EB%A1%9C123%EB%B2%88%EA%B8%B8%2055&amp;map_type=TYPE_MAP&amp;from=roughmap"
         >
-          <Image src="/which.png" classNames={{ wrapper: 'w-full !max-w-full' }} className="map w-full object-cover" />
+          <Image src={mapImg} alt="kakaoMap" className="rounded-xl w-full" />
         </Link>
         <ButtonGroup fullWidth variant="shadow">
           <Button as={Link} isExternal href="https://tmap.life/7ab28f4e" startContent={<TmapIcon />} color="primary">

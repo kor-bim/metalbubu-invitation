@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import introduceImg from '@public/introduce.webp'
-import addressImg from '@public/address.webp'
+import { Title3Icon } from '@/components/essential'
 
 export const IntroduceSection = () => {
   return (
@@ -37,7 +37,7 @@ export const IntroduceSection = () => {
           <Image src={introduceImg} alt="introduceImg" className="w-full h-auto object-contain" priority />
         </div>
         <div className="absolute bottom-10 left-[50%] -translate-x-1/2 z-20 w-[70%]">
-          <Image src={addressImg} alt="address" priority />
+          <Title3Icon />
         </div>
       </div>
     </div>
