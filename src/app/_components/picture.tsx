@@ -82,7 +82,7 @@ export const PictureSection = () => {
                 onOpen()
               }}
             >
-              <Image src={picture.src} alt={picture.alt} className="object-cover w-full" />
+              <Image src={picture.src} alt={picture.alt} />
             </Card>
           ))}
         </div>
@@ -94,7 +94,7 @@ export const PictureSection = () => {
           animate={{ height: showAll ? 'auto' : 250 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="columns-2 gap-4 space-y-4">
             {pictures.slice(2).map((picture, index) => (
               <Card
                 fullWidth
@@ -106,7 +106,7 @@ export const PictureSection = () => {
                   onOpen()
                 }}
               >
-                <Image src={picture.src} alt={picture.alt} />
+                <Image src={picture.src} alt={picture.alt} priority />
               </Card>
             ))}
           </div>
