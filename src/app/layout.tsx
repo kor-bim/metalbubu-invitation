@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: '박병주 ♥ 이은총 결혼식',
     images: [
       {
-        url: 'https://invitation.metalbubu.life/og-img.png',
+        url: 'https://invitation.metalbubu.life/og-image.png',
         width: 1200,
         height: 630,
         alt: '청첩장 썸네일'
