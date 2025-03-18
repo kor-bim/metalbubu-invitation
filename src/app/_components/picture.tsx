@@ -106,7 +106,7 @@ export const PictureSection = () => {
                   onOpen()
                 }}
               >
-                <Image src={picture.src} alt={picture.alt} priority />
+                <Image src={picture.src} alt={picture.alt} />
               </Card>
             ))}
           </div>

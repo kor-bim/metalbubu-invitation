@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import introduceImg from '@public/introduce.png'
-import addressImg from '@public/address.png'
+import introduceImg from '@public/introduce.webp'
+import addressImg from '@public/address.webp'
 
 export const IntroduceSection = () => {
   return (
