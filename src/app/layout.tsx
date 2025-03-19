@@ -1,15 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { ReactNode } from 'react'
-import localFont from 'next/font/local'
 import Providers from '@/app/provider'
-
-const pretendard = localFont({
-  src: '../../public/PretendardVariable.woff2',
-  display: 'swap',
-  weight: '45 920',
-  variable: '--font-pretendard'
-})
 
 export const metadata: Metadata = {
   title: '박병주 ♥ 이은총 결혼식에 초대합니다. 🤘',
@@ -45,8 +37,8 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="kr" suppressHydrationWarning className={`${pretendard.variable}`}>
-      <body className={`${pretendard.className} antialiased`}>
+    <html lang="kr" suppressHydrationWarning>
+      <body className="antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>
