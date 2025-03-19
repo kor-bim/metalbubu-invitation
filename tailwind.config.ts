@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cafe24: ['Cafe24Ssurround', 'sans-serif'],
+        cafe24air: ['Cafe24SsurroundAir', 'sans-serif']
+      },
       screens: {
         xxs: '375px', // 375px 이하의 초소형 기기 (아이폰 SE, 갤럭시 A 시리즈)
         xs: '450px', // 450px 이하의 소형 기기

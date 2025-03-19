@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Modal, ModalContent, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
+import { Modal, ModalContent, ModalBody, useDisclosure } from '@heroui/modal'
 import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
 import { Icon } from '@iconify/react'
@@ -136,11 +136,6 @@ export const PictureSection = () => {
                 <ModalBody className="p-0 h-dvh">
                   <Gallery pictures={pictures} initialIndex={selectedIndex} />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="danger" variant="light" onPress={() => setSelectedIndex(null)}>
-                    Close
-                  </Button>
-                </ModalFooter>
               </>
             )}
           </ModalContent>

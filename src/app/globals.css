@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('../../public/Cafe24Ssurround.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('../../public/Cafe24SsurroundAir.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @layer base {
     /*html, body {*/
@@ -9,5 +22,30 @@
     /*}*/
     code, kbd, samp, pre {
         font-family: pretendard, pretendard Fallback, sans-serif;
+    }
+}
+
+@layer utilities {
+    .stroke-text {
+        -webkit-text-stroke: 1px #ffffff; /* 흰색(FFFFFF) 외곽선 */
+    }
+
+    .stroke-text-2 {
+        -webkit-text-stroke: 2px #ffffff; /* 두꺼운 흰색 외곽선 */
+    }
+
+    .stroke-text-thin {
+        -webkit-text-stroke: 0.5px #ffffff; /* 얇은 흰색 외곽선 */
+    }
+
+    .fix-stroke {
+        paint-order: stroke fill;
+    }
+
+    textarea::placeholder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

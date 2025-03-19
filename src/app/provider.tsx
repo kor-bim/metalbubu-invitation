@@ -1,8 +1,16 @@
 'use client'
 
 import { HeroUIProvider } from '@heroui/system'
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 export default function Providers({ children }: { children: ReactNode }) {
-  return <HeroUIProvider>{children}</HeroUIProvider>
+  const [queryClient] = useState(() => new QueryClient())
+  return (
+    <QueryClientProvider client={queryClient}>
+      <HeroUIProvider>{children}</HeroUIProvider>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  )
 }
