@@ -36,7 +36,7 @@ export const Gallery = ({
       >
         {pictures.map((picture, index) => (
           <SwiperSlide key={index} className="w-full !flex flex-col items-center justify-center">
-            <Image src={picture.src} alt={picture.alt} className="w-full h-full object-contain" />
+            <Image src={picture.src} alt={picture.alt} className="w-full h-full object-contain" priority />
           </SwiperSlide>
         ))}
       </Swiper>
