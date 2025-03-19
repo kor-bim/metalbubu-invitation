@@ -9,6 +9,7 @@ export default function Home() {
         <PictureSection />
         <MapSection />
         <GuestBookSection />
+        <div className="relative w-full h-[100px] flex flex-col items-center justify-center px-4"></div>
       </div>
     </div>
   )

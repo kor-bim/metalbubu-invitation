@@ -47,7 +47,7 @@ export const GuestBookSection = () => {
           onOpenChange={onInputModalChange}
           openListModal={openListModal}
         />
-        <GuestbookListModal isOpen={isListModalOpen} onOpenChange={onListModalChange} />
+        <GuestbookListModal isOpen={isListModalOpen} onOpenChange={onListModalChange} openInputModal={openInputModal} />
       </div>
     </>
   )
