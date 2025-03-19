@@ -17,7 +17,7 @@ export const GuestBookSection = () => {
 
   return (
     <>
-      <div className="relative w-full flex flex-col items-center justify-center px-4 mt-20">
+      <div className="relative w-full flex flex-col items-center justify-center px-4 mt-24">
         <div className="absolute -top-16 z-50">
           <GuestBookIcon />
         </div>
