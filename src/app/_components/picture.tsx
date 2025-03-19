@@ -15,24 +15,24 @@ import wedding3 from '@public/wedding/3.jpg'
 import wedding4 from '@public/wedding/4.jpg'
 import wedding5 from '@public/wedding/5_land.jpg'
 import wedding6 from '@public/wedding/6.jpg'
-import wedding7 from '@public/wedding/7.jpg'
-import wedding8 from '@public/wedding/8.jpg'
+// import wedding7 from '@public/wedding/7.jpg'
+// import wedding8 from '@public/wedding/8.jpg'
 import wedding9 from '@public/wedding/9_land.jpg'
-import wedding10 from '@public/wedding/10_land.jpg'
-import wedding11 from '@public/wedding/11.jpg'
-import wedding12 from '@public/wedding/12.jpg'
-import wedding13 from '@public/wedding/13.jpg'
-import wedding14 from '@public/wedding/14.jpg'
-import wedding15 from '@public/wedding/15.jpg'
-import wedding16 from '@public/wedding/16.jpg'
-import wedding17 from '@public/wedding/17.jpg'
-import wedding18 from '@public/wedding/18.jpg'
-import wedding19 from '@public/wedding/19.jpg'
-import wedding20 from '@public/wedding/20_land.jpg'
-import wedding21 from '@public/wedding/21.jpg'
-import wedding22 from '@public/wedding/22.jpg'
-import wedding23 from '@public/wedding/23.jpg'
-import wedding24 from '@public/wedding/24_land.jpg'
+// import wedding10 from '@public/wedding/10_land.jpg'
+// import wedding11 from '@public/wedding/11.jpg'
+// import wedding12 from '@public/wedding/12.jpg'
+// import wedding13 from '@public/wedding/13.jpg'
+// import wedding14 from '@public/wedding/14.jpg'
+// import wedding15 from '@public/wedding/15.jpg'
+// import wedding16 from '@public/wedding/16.jpg'
+// import wedding17 from '@public/wedding/17.jpg'
+// import wedding18 from '@public/wedding/18.jpg'
+// import wedding19 from '@public/wedding/19.jpg'
+// import wedding20 from '@public/wedding/20_land.jpg'
+// import wedding21 from '@public/wedding/21.jpg'
+// import wedding22 from '@public/wedding/22.jpg'
+// import wedding23 from '@public/wedding/23.jpg'
+// import wedding24 from '@public/wedding/24_land.jpg'
 
 // **이미지 리스트**
 const pictures = [
@@ -42,24 +42,24 @@ const pictures = [
   { src: wedding2, alt: 'wedding2', width: 1080, height: 1920 },
   { src: wedding3, alt: 'wedding3', width: 1080, height: 1920 },
   { src: wedding4, alt: 'wedding4', width: 1080, height: 1920 },
-  { src: wedding6, alt: 'wedding6', width: 1080, height: 1920 },
-  { src: wedding7, alt: 'wedding7', width: 1080, height: 1920 },
-  { src: wedding8, alt: 'wedding8', width: 1080, height: 1920 },
-  { src: wedding10, alt: 'wedding10', width: 1920, height: 1080, orientation: 'landscape' },
-  { src: wedding11, alt: 'wedding11', width: 1080, height: 1920 },
-  { src: wedding12, alt: 'wedding12', width: 1080, height: 1920 },
-  { src: wedding13, alt: 'wedding13', width: 1080, height: 1920 },
-  { src: wedding14, alt: 'wedding14', width: 1080, height: 1920 },
-  { src: wedding15, alt: 'wedding15', width: 1080, height: 1920 },
-  { src: wedding16, alt: 'wedding16', width: 1080, height: 1920 },
-  { src: wedding17, alt: 'wedding17', width: 1080, height: 1920 },
-  { src: wedding18, alt: 'wedding18', width: 1080, height: 1920 },
-  { src: wedding19, alt: 'wedding19', width: 1080, height: 1920 },
-  { src: wedding20, alt: 'wedding20', width: 1920, height: 1080, orientation: 'landscape' },
-  { src: wedding21, alt: 'wedding21', width: 1080, height: 1920 },
-  { src: wedding22, alt: 'wedding22', width: 1080, height: 1920 },
-  { src: wedding23, alt: 'wedding23', width: 1080, height: 1920 },
-  { src: wedding24, alt: 'wedding24', width: 1920, height: 1080, orientation: 'landscape' }
+  { src: wedding6, alt: 'wedding6', width: 1080, height: 1920 }
+  // { src: wedding7, alt: 'wedding7', width: 1080, height: 1920 },
+  // { src: wedding8, alt: 'wedding8', width: 1080, height: 1920 },
+  // { src: wedding10, alt: 'wedding10', width: 1920, height: 1080, orientation: 'landscape' },
+  // { src: wedding11, alt: 'wedding11', width: 1080, height: 1920 },
+  // { src: wedding12, alt: 'wedding12', width: 1080, height: 1920 },
+  // { src: wedding13, alt: 'wedding13', width: 1080, height: 1920 },
+  // { src: wedding14, alt: 'wedding14', width: 1080, height: 1920 },
+  // { src: wedding15, alt: 'wedding15', width: 1080, height: 1920 },
+  // { src: wedding16, alt: 'wedding16', width: 1080, height: 1920 },
+  // { src: wedding17, alt: 'wedding17', width: 1080, height: 1920 },
+  // { src: wedding18, alt: 'wedding18', width: 1080, height: 1920 },
+  // { src: wedding19, alt: 'wedding19', width: 1080, height: 1920 },
+  // { src: wedding20, alt: 'wedding20', width: 1920, height: 1080, orientation: 'landscape' },
+  // { src: wedding21, alt: 'wedding21', width: 1080, height: 1920 },
+  // { src: wedding22, alt: 'wedding22', width: 1080, height: 1920 },
+  // { src: wedding23, alt: 'wedding23', width: 1080, height: 1920 },
+  // { src: wedding24, alt: 'wedding24', width: 1920, height: 1080, orientation: 'landscape' }
 ]
 
 export const PictureSection = () => {
