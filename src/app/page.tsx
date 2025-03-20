@@ -1,4 +1,9 @@
-import { GuestBookSection, HeroSection, IntroduceSection, MapSection, PictureSection } from './_components'
+import { HeroSection } from '@/components/hero'
+import { IntroduceSection } from '@/components/introduce'
+import { PictureSection } from '@/components/picture'
+import { MapSection } from '@/components/map'
+import { GuestBookSection } from '@/components/guest-book/guestbook'
+import { AccountSection } from '@/components/account'
 
 export default function Home() {
   return (
@@ -9,7 +14,7 @@ export default function Home() {
         <PictureSection />
         <MapSection />
         <GuestBookSection />
-        <div className="relative w-full h-[100px] flex flex-col items-center justify-center px-4"></div>
+        <AccountSection />
       </div>
     </div>
   )

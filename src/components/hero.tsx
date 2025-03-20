@@ -1,4 +1,4 @@
-import { HeroIcon, Title2Icon, TitleIcon } from '@/components/essential'
+import { HeroIcon, Title2Icon, TitleIcon } from '@/components/icons'
 
 export const HeroSection = () => {
   return (

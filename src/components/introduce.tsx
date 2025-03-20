@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import introduceImg from '@public/introduce-2.webp'
-import { Title3Icon } from '@/components/essential'
+import { Title3Icon } from '@/components/icons'
 
 export const IntroduceSection = () => {
   return (

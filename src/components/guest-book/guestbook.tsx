@@ -1,12 +1,12 @@
 'use client'
 
-import { GuestBookIcon } from '@/components/essential'
 import { Card, CardBody } from '@heroui/card'
 import { Button } from '@heroui/button'
 import { Spacer } from '@heroui/spacer'
 import { useDisclosure } from '@heroui/modal'
 import { GuestbookInputModal } from './gusetbook-input'
-import { GuestbookListModal } from '@/app/_components/guestbook-list'
+import { GuestbookListModal } from './guestbook-list'
+import { GuestBookIcon } from '@/components/icons'
 
 export const GuestBookSection = () => {
   // 방명록 작성 모달
