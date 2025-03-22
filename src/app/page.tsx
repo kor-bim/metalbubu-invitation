@@ -4,6 +4,7 @@ import { PictureSection } from '@/components/picture'
 import { MapSection } from '@/components/map'
 import { GuestBookSection } from '@/components/guest-book/guestbook'
 import { AccountSection } from '@/components/account'
+import { CalendarSection } from '@/components/calendar'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="w-full max-w-[690px] min-w-[375px] flex flex-col items-center justify-center box-border gap-16">
         <HeroSection />
         <IntroduceSection />
+        <CalendarSection />
         <PictureSection />
         <MapSection />
         <GuestBookSection />

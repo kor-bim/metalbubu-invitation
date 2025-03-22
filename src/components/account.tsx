@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from 'react'
 import { Button } from '@heroui/button'
 import Image from 'next/image'
-import butterFlyImg from '@public/butterfly.png'
+import butterFlyImg from '@public/butterfly.webp'
 import { Modal, ModalContent, useDisclosure } from '@heroui/modal'
 import { Card, CardBody } from '@heroui/card'
 import { Divider } from '@heroui/divider'
