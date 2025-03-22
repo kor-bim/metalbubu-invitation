@@ -10,7 +10,7 @@ export const CountdownDisplay = () => {
     seconds: 0
   })
 
-  // Flag to check if the component has mounted
+  // 마운트 여부를 체크하는 플래그
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -41,29 +41,65 @@ export const CountdownDisplay = () => {
     return null
   }
 
+  // 각 유닛을 2자리 문자열로 패딩 처리
+  const paddedDays = timeLeft.days.toString().padStart(2, '0')
+  const paddedHours = timeLeft.hours.toString().padStart(2, '0')
+  const paddedMinutes = timeLeft.minutes.toString().padStart(2, '0')
+  const paddedSeconds = timeLeft.seconds.toString().padStart(2, '0')
+
   return (
     <div className="w-full flex items-center justify-center gap-3">
-      {Object.entries({ DAYS: '0387A8', HOURS: '323280', MIN: '0387A8', SEC: '323280' }).map(
-        ([label, color], index) => (
-          <div key={label} className="w-full flex flex-col items-center justify-center gap-1">
-            <span className={`font-cafe24 text-xl sm:text-3xl text-[#${color}]`}>{label}</span>
-            <div className="w-full flex items-center justify-center gap-1">
-              {timeLeft[Object.keys(timeLeft)[index]]
-                .toString()
-                .padStart(2, '0')
-                .split('')
-                .map((digit, i) => (
-                  <div
-                    key={i}
-                    className={`w-full flex items-center justify-center bg-[#${color}] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8`}
-                  >
-                    <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{digit}</span>
-                  </div>
-                ))}
-            </div>
+      {/* Days */}
+      <div className="w-full flex flex-col items-center justify-center gap-1">
+        <span className="font-cafe24 text-xl sm:text-3xl text-[#0387A8]">DAYS</span>
+        <div className="w-full flex items-center justify-center gap-1">
+          <div className="w-full flex items-center justify-center bg-[#0387A8] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedDays[0]}</span>
           </div>
-        )
-      )}
+          <div className="w-full flex items-center justify-center bg-[#0387A8] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedDays[1]}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Hours */}
+      <div className="w-full flex flex-col items-center justify-center gap-1">
+        <span className="font-cafe24 text-xl sm:text-3xl text-[#323280]">HOURS</span>
+        <div className="w-full flex items-center justify-center gap-1">
+          <div className="w-full flex items-center justify-center bg-[#323280] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedHours[0]}</span>
+          </div>
+          <div className="w-full flex items-center justify-center bg-[#323280] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedHours[1]}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Minutes */}
+      <div className="w-full flex flex-col items-center justify-center gap-1">
+        <span className="font-cafe24 text-xl sm:text-3xl text-[#0387A8]">MIN</span>
+        <div className="w-full flex items-center justify-center gap-1">
+          <div className="w-full flex items-center justify-center bg-[#0387A8] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedMinutes[0]}</span>
+          </div>
+          <div className="w-full flex items-center justify-center bg-[#0387A8] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedMinutes[1]}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Seconds */}
+      <div className="w-full flex flex-col items-center justify-center gap-1">
+        <span className="font-cafe24 text-xl sm:text-3xl text-[#323280]">SEC</span>
+        <div className="w-full flex items-center justify-center gap-1">
+          <div className="w-full flex items-center justify-center bg-[#323280] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedSeconds[0]}</span>
+          </div>
+          <div className="w-full flex items-center justify-center bg-[#323280] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8">
+            <span className="font-cafe24 text-lg xxs:text-2xl sm:text-4xl text-white">{paddedSeconds[1]}</span>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
