@@ -10,7 +10,12 @@ export const CountdownDisplay = () => {
     seconds: 0
   })
 
+  // Flag to check if the component has mounted
+  const [isMounted, setIsMounted] = useState(false)
+
   useEffect(() => {
+    setIsMounted(true)
+
     const targetDate = new Date('2025-05-17T16:00').getTime()
 
     const calculateTimeLeft = () => {
@@ -18,12 +23,12 @@ export const CountdownDisplay = () => {
       return {
         days: Math.floor(total / (1000 * 60 * 60 * 24)),
         hours: Math.floor((total / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((total / 1000 / 60) % 60),
+        minutes: Math.floor((total / (1000 * 60)) % 60),
         seconds: Math.floor((total / 1000) % 60)
       }
     }
 
-    setTimeLeft(calculateTimeLeft()) // 초기값 설정
+    setTimeLeft(calculateTimeLeft())
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft())
@@ -31,6 +36,10 @@ export const CountdownDisplay = () => {
 
     return () => clearInterval(timer)
   }, [])
+
+  if (!isMounted) {
+    return null
+  }
 
   return (
     <div className="w-full flex items-center justify-center gap-3">
