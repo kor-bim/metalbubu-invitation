@@ -1,29 +1,36 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const CountdownDisplay = () => {
-  const targetDate = new Date('2025-05-17T16:00').getTime()
-
-  const calculateTimeLeft = useCallback(() => {
-    const total = Math.max(targetDate - Date.now(), 0)
-    return {
-      days: Math.floor(total / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((total / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((total / 1000 / 60) % 60),
-      seconds: Math.floor((total / 1000) % 60)
-    }
-  }, [targetDate])
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft)
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  })
 
   useEffect(() => {
+    const targetDate = new Date('2025-05-17T16:00').getTime()
+
+    const calculateTimeLeft = () => {
+      const total = Math.max(targetDate - Date.now(), 0)
+      return {
+        days: Math.floor(total / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((total / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((total / 1000 / 60) % 60),
+        seconds: Math.floor((total / 1000) % 60)
+      }
+    }
+
+    setTimeLeft(calculateTimeLeft()) // 초기값 설정
+
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft())
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [calculateTimeLeft, targetDate])
+  }, [])
 
   return (
     <div className="w-full flex items-center justify-center gap-3">
@@ -36,7 +43,7 @@ export const CountdownDisplay = () => {
                 .toString()
                 .padStart(2, '0')
                 .split('')
-                .map((digit: number, i: number) => (
+                .map((digit, i) => (
                   <div
                     key={i}
                     className={`w-full flex items-center justify-center bg-[#${color}] rounded-lg xxs:rounded-xl py-3 xxs:py-4 sm:py-8`}
