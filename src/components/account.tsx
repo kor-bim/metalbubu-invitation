@@ -43,7 +43,7 @@ export const AccountSection = () => {
   const selectedAccounts = useMemo(() => (selectedSide ? accounts[selectedSide] : []), [selectedSide, accounts])
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center px-4">
+    <div className="relative w-full flex flex-col items-center justify-center px-4 bg-[url(/background.webp)] bg-no-repeat bg-cover">
       {/* 버튼 */}
       <div className="absolute w-full flex items-center justify-center gap-8 px-14">
         <Button

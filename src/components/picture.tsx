@@ -61,7 +61,7 @@ export const PictureSection = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col items-center justify-center gap-4 px-4">
+      <div className="w-full flex flex-col items-center justify-center gap-4 px-4 mt-14">
         <div className="w-full flex flex-col items-center justify-center gap-4">
           <motion.div {...motionConfig} {...clickMotionConfig}>
             <Image
