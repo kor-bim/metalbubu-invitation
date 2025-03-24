@@ -100,7 +100,7 @@ export const MapSection = () => {
             </span>
           </div>
           <Divider />
-          <Accordion selectionMode="multiple" defaultExpandedKeys={['1']} className="px-0">
+          <Accordion selectionMode="multiple" className="px-0">
             <AccordionItem
               key="1"
               aria-label="대전 시내버스 이용"
