@@ -105,11 +105,11 @@ export const MapSection = () => {
               <div className="w-full flex flex-col gap-2 text-sm">
                 <span className="text-[#3d5bab] font-semibold">■ 간선버스</span>
                 <div className="ml-1 border-l-4 border-[#3d5bab] pl-2">
-                  <span>
+                  <span className="text-[#555555]">
                     🚌 <span className="text-[#3d5bab] font-bold">707</span> (대전역) → 스마트시티 2단지 정류장 하차
                   </span>
                   <br />
-                  <span>
+                  <span className="text-[#555555]">
                     🚌 <span className="text-[#3d5bab] font-bold">618</span> (대전예술의전당) → 스마트시티 5단지 정류장
                     하차
                   </span>
@@ -117,19 +117,19 @@ export const MapSection = () => {
 
                 <span className="text-[#3b9f37] font-semibold mt-2">■ 지선버스</span>
                 <div className="ml-1 border-l-4 border-[#3b9f37] pl-2">
-                  <span>
+                  <span className="text-[#555555]">
                     🚌 <span className="text-[#3b9f37] font-bold">606</span> (대전역) →{' '}
                     <span className="text-[#3d5bab] font-bold">618</span> (대전예술의전당) → 스마트시티 5단지 정류장
                     하차
                   </span>
                   <br />
-                  <span>
+                  <span className="text-[#555555]">
                     🚌 <span className="text-[#3b9f37] font-bold">606</span> (대전역) →{' '}
                     <span className="text-[#3b9f37] font-bold">911</span> (수정타운아파트정문) → 스마트시티 5단지 정류장
                     하차
                   </span>
                   <br />
-                  <span>
+                  <span className="text-[#555555]">
                     🚌 <span className="text-[#3b9f37] font-bold">606</span> (대전역) →{' '}
                     <span className="text-[#3b9f37] font-bold">121</span> (국립중앙과학관) → MBC/TJB 방송국 정류장 하차
                   </span>
@@ -143,7 +143,7 @@ export const MapSection = () => {
               <div className="w-full flex flex-col gap-2 text-sm">
                 <span className="text-[#3d5bab] font-semibold">■ 시외버스</span>
                 <div className="ml-1 border-l-4 border-gray-500 pl-2">
-                  <span className="block">
+                  <span className="block text-[#555555]">
                     🚍 <strong>동서울종합터미널</strong> → 대전청사시외버스둔산정류소 →{' '}
                     <span className="text-[#3d5bab] font-bold">618</span> (정부대전청사서문) → 스마트시티 5단지 정류장
                     하차
@@ -152,11 +152,11 @@ export const MapSection = () => {
 
                 <span className="text-[#3d5bab] font-semibold mt-2">■ 기차</span>
                 <div className="ml-1 border-l-4 border-gray-500 pl-2">
-                  <span className="block">
+                  <span className="block text-[#555555]">
                     🚆 <strong>서울역</strong> → 서대전역 → <span className="text-[#3d5bab] font-bold">618</span>{' '}
                     (서대전역네거리) → 스마트시티 5단지 정류장 하차
                   </span>
-                  <span className="block">
+                  <span className="block text-[#555555]">
                     🚆 <strong>서울역</strong> → 대전역 → <span className="text-[#3d5bab] font-bold">618</span>{' '}
                     (정부청사역) → 스마트시티 5단지 정류장 하차
                   </span>
