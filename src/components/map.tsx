@@ -144,7 +144,7 @@ export const MapSection = () => {
             <AccordionItem
               key="2"
               aria-label="서울에서 오는 길"
-              title={<span className="font-bold">서울에서 오는 길</span>}
+              title={<span className="font-bold">서울에서 오는 방법</span>}
             >
               <div className="w-full flex flex-col gap-2 text-sm">
                 <span className="text-[#3d5bab] font-semibold">■ 시외버스</span>
