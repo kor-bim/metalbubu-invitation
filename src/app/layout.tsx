@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from 'next'
-import './globals.css'
 import { ReactNode } from 'react'
 import Providers from '@/app/provider'
+import localFont from 'next/font/local'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: '박병주 ♥ 이은총 결혼식에 초대합니다. 🤘',
+  title: 'PBJ💜LEC 🔜 🦋BUBU🦋',
   description: '2025년 5월 17일(토) 오후4시 호텔 ICC웨딩홀 1층',
   openGraph: {
-    title: '박병주 ♥ 이은총 결혼식에 초대합니다. 🤘',
+    title: '박병주♥이은총 결혼 🎸',
     description: '2025년 5월 17일(토) 오후4시 호텔 ICC웨딩홀 1층',
     url: 'https://invitation.metalbubu.life',
     siteName: '박병주 ♥ 이은총 결혼식',
@@ -31,6 +32,13 @@ export const viewport: Viewport = {
   userScalable: false // user-scalable=0
 }
 
+const pretendard = localFont({
+  src: '../../public/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920',
+  variable: '--font-pretendard'
+})
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -38,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kr" suppressHydrationWarning>
-      <body className="antialiased">
+      <body className={`${pretendard.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>

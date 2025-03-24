@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        gowunDodum: ['GowunDodum-Regular', 'sans-serif'],
         cafe24: ['Cafe24Ssurround', 'sans-serif'],
         cafe24air: ['Cafe24SsurroundAir', 'sans-serif']
       },

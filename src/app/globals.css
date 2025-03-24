@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('../../public/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Cafe24Ssurround';
     src: url('../../public/Cafe24Ssurround.woff2') format('woff2');
     font-weight: normal;

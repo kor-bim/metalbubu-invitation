@@ -18,7 +18,8 @@ const eslintConfig = [
   {
     rules: {
       'jsx-a11y/alt-text': 'off',
-      '@tanstack/query/exhaustive-deps': 'error'
+      '@tanstack/query/exhaustive-deps': 'error',
+      '@typescript-eslint/no-explicit-any': 'off'
     }
   }
 ]

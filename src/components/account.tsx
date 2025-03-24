@@ -13,24 +13,22 @@ export const AccountSection = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [selectedSide, setSelectedSide] = useState<'groom' | 'bride' | null>(null)
 
-  // ✅ useMemo를 활용해 데이터 캐싱 (렌더링 시 재생성 방지)
   const accounts = useMemo(
     () => ({
       groom: [
-        { name: '박병주', bank: '국민은행', account: '123-456-789' },
-        { name: '혼주 박봉래', bank: '신한은행', account: '987-654-321' },
-        { name: '혼주 오미연', bank: '우리은행', account: '456-789-123' }
+        { name: '박병주', bank: '국민은행', account: '921114-02-655' },
+        { name: '혼주 박봉래', bank: '농협은행', account: '302-1989-1867-91' },
+        { name: '혼주 오미연', bank: '농협은행', account: '830-02-014740' }
       ],
       bride: [
-        { name: '이은총', bank: '하나은행', account: '321-654-987' },
-        { name: '혼주 이종헌', bank: '농협은행', account: '654-987-321' },
-        { name: '혼주 강혜숙', bank: '기업은행', account: '789-123-456' }
+        { name: '이은총', bank: '국민은행', account: '710402-00-066471' },
+        { name: '혼주 이종헌', bank: '농협은행', account: '272-12-116912' },
+        { name: '혼주 강혜숙', bank: '국민은행', account: '733101-01-230457' }
       ]
     }),
     []
   )
 
-  // ✅ useCallback으로 openModal 함수 최적화 (불필요한 재생성 방지)
   const openModal = useCallback(
     (side: 'groom' | 'bride') => {
       setSelectedSide(side)
@@ -39,7 +37,6 @@ export const AccountSection = () => {
     [onOpen]
   )
 
-  // ✅ useMemo로 selectedAccounts 최적화 (불필요한 렌더링 방지)
   const selectedAccounts = useMemo(() => (selectedSide ? accounts[selectedSide] : []), [selectedSide, accounts])
 
   return (
