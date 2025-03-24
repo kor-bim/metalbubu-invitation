@@ -8,6 +8,7 @@ import mapImg from '@public/map.png'
 import { KakaoNaviIcon, NaverMapIcon, TmapIcon } from '@/components/icons'
 import Script from 'next/script'
 import { Divider } from '@heroui/divider'
+import { Accordion, AccordionItem } from '@heroui/accordion'
 
 export const MapSection = () => {
   return (
@@ -24,7 +25,7 @@ export const MapSection = () => {
       />
       <div className="w-full flex flex-col items-center justify-center gap-8 px-4">
         <div className="w-44 h-14 rounded-[50%] bg-[#a897a7] flex items-center justify-center">
-          <span className="text-lg text-white font-bold">- 오시는길 -</span>
+          <span className="text-lg text-white font-bold font-gowunDodum">- 오시는길 -</span>
         </div>
         <div className="flex flex-col items-center justify-center">
           <span className="text-xl font-bold font-gowunDodum">호텔ICC웨딩홀 1F, 크리스탈 볼룸홀</span>
@@ -34,7 +35,7 @@ export const MapSection = () => {
             tooltipProps={{
               content: '주소를 복사하세요'
             }}
-            classNames={{ pre: 'font-gowunDodum font-bold text-[#666666]' }}
+            classNames={{ pre: 'font-gowunDodum text-[#666666] pl-5' }}
             className="bg-transparent"
           >
             대전 유성구 엑스포로123번길 55
@@ -99,9 +100,13 @@ export const MapSection = () => {
             </span>
           </div>
           <Divider />
-          <div className="w-full flex flex-col items-start justify-center gap-8">
-            <div className="w-full flex flex-col items-start justify-center gap-3">
-              <span className="font-bold">대전 시내버스 이용</span>
+          <Accordion selectionMode="multiple" defaultExpandedKeys={['1']} className="px-0">
+            <AccordionItem
+              key="1"
+              aria-label="대전 시내버스 이용"
+              title={<span className="font-bold">대전 시내버스 이용</span>}
+              classNames={{ content: 'pb-6' }}
+            >
               <div className="w-full flex flex-col gap-2 text-sm">
                 <span className="text-[#3d5bab] font-semibold">■ 간선버스</span>
                 <div className="ml-1 border-l-4 border-[#3d5bab] pl-2">
@@ -135,11 +140,12 @@ export const MapSection = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <Divider />
-            <div className="w-full flex flex-col items-start justify-center gap-3">
-              <span className="font-bold">서울에서 오는 길</span>
-
+            </AccordionItem>
+            <AccordionItem
+              key="2"
+              aria-label="서울에서 오는 길"
+              title={<span className="font-bold">서울에서 오는 길</span>}
+            >
               <div className="w-full flex flex-col gap-2 text-sm">
                 <span className="text-[#3d5bab] font-semibold">■ 시외버스</span>
                 <div className="ml-1 border-l-4 border-gray-500 pl-2">
@@ -162,8 +168,8 @@ export const MapSection = () => {
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </>
