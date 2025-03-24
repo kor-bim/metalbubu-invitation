@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+
 import YouTube from 'react-youtube'
 import { motion } from 'framer-motion'
 import useJukebox from '@/hooks/use-jukebox'
@@ -10,38 +10,7 @@ import cdImg from '@public/cd.png'
 
 export const MusicPlayer = () => {
   const videoId = 'P5jFtmwz0Yw'
-  const { onReady, playVideo, pauseVideo } = useJukebox()
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const opts = {
-    height: '0',
-    width: '0',
-    playerVars: {
-      autoplay: 0,
-      controls: 0,
-      modestbranding: 1,
-      rel: 0,
-      showinfo: 0
-    }
-  }
-
-  const handleToggle = () => {
-    if (isPlaying) {
-      pauseVideo()
-      setIsPlaying(false)
-    } else {
-      playVideo()
-      setIsPlaying(true)
-    }
-  }
-
-  // 영상 종료 시 자동 재생 처리
-  const handleStateChange = (event: any) => {
-    if (event.data === 0) {
-      playVideo()
-      setIsPlaying(true)
-    }
-  }
+  const { onReady, opts, isPlaying, handlePlayPause, onStateChange } = useJukebox()
 
   return (
     // 외부 래퍼: 그라데이션 배경, box-shadow, 4.8px 패딩 적용
@@ -50,15 +19,9 @@ export const MusicPlayer = () => {
         {/* 내부 플레이어 컨테이너: 민트색 그라데이션 배경, inset box-shadow 적용 */}
         <div className="bg-gradient-to-b from-[#aafaff] to-[#19c0c0] text-white flex items-center gap-1 rounded-full shadow-[inset_1px_2px_6px_rgba(0,0,0,0.3)] h-6 pe-1">
           {/* 숨김 처리된 YouTube 플레이어 */}
-          <YouTube
-            videoId={videoId}
-            opts={opts}
-            onReady={onReady}
-            onStateChange={handleStateChange}
-            className="hidden"
-          />
+          <YouTube videoId={videoId} opts={opts} onReady={onReady} onStateChange={onStateChange} className="hidden" />
 
-          <Button isIconOnly onPress={handleToggle} radius="full" size="sm" variant="light">
+          <Button isIconOnly onPress={handlePlayPause} radius="full" size="sm" variant="light">
             {isPlaying ? (
               <Icon icon="solar:pause-bold" width="12" height="12" className="text-[#555555]" />
             ) : (
