@@ -6,22 +6,11 @@ import { Button } from '@heroui/button'
 import { Snippet } from '@heroui/snippet'
 import mapImg from '@public/map.png'
 import { KakaoNaviIcon, NaverMapIcon, TmapIcon } from '@/components/icons'
-import Script from 'next/script'
 import { Divider } from '@heroui/divider'
 
 export const MapSection = () => {
   return (
     <>
-      <Script
-        src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
-        integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka"
-        crossOrigin="anonymous"
-        onLoad={() => {
-          if (!window.Kakao.isInitialized()) {
-            window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY)
-          }
-        }}
-      />
       <div className="w-full flex flex-col items-center justify-center gap-8 px-4">
         <div className="w-44 h-14 rounded-[50%] bg-[#a897a7] flex items-center justify-center">
           <span className="text-lg text-white font-bold">- 오시는길 -</span>
@@ -168,10 +157,4 @@ export const MapSection = () => {
       </div>
     </>
   )
-}
-
-declare global {
-  interface Window {
-    Kakao: any
-  }
 }
