@@ -43,7 +43,9 @@ export const GuestbookListModal = ({ isOpen, onOpenChange, openInputModal }) => 
                         <CardBody className="w-full flex flex-col items-center justify-center gap-2 bg-[#FFE5EF] p-4 rounded-xl">
                           <span className="font-cafe24 text-[#0088A9]">{entry.name}</span>
                           <Divider className="h-[2px] bg-[#0088A9]" />
-                          <p className="w-2/3 text-sm font-cafe24air text-[#0088A9] text-center">{entry.message}</p>
+                          <p className="w-full text-sm font-cafe24air text-[#0088A9] whitespace-pre-wrap p-2">
+                            {entry.message}
+                          </p>
                         </CardBody>
                       </Card>
                     ))
