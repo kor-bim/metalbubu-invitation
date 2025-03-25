@@ -7,6 +7,7 @@ import { AccountSection } from '@/components/account'
 import { CalendarSection } from '@/components/calendar'
 import { CherryBlossomSection } from '@/components/cherry-blossom'
 import { MusicPlayer } from '@/components/music-player'
+import { ShareButton } from '@/components/share-button'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <MapSection />
         <GuestBookSection />
         <AccountSection />
+        <ShareButton />
       </div>
     </div>
   )
