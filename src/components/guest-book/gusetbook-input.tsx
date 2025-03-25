@@ -70,35 +70,35 @@ export const GuestbookInputModal = ({ isOpen, onOpenChange, openListModal }) => 
                   onSubmit={handleSubmit(onSubmit)}
                   className="w-full flex flex-col items-center justify-center gap-4"
                 >
-                  <Input
-                    size="lg"
-                    classNames={{
-                      inputWrapper: 'bg-[#FFE5EF]',
-                      input: 'font-cafe24 text-lg placeholder:text-[#0088A9] text-center'
-                    }}
-                    placeholder="이름을 남겨주세요"
-                    {...register('name')}
-                    isInvalid={!!errors.name}
-                    errorMessage={errors.name?.message}
-                  />
+                  <div className="w-full flex items-center justify-between gap-2">
+                    <Input
+                      classNames={{
+                        inputWrapper: 'bg-[#FFE5EF]',
+                        input: 'font-cafe24 text-xs placeholder:text-[#0088A9] text-center'
+                      }}
+                      placeholder="이름을 남겨주세요"
+                      {...register('name')}
+                      isInvalid={!!errors.name}
+                      errorMessage={errors.name?.message}
+                    />
 
-                  <Input
-                    size="lg"
-                    classNames={{
-                      inputWrapper: 'bg-[#FFE5EF]',
-                      input: 'font-cafe24 text-lg placeholder:text-[#0088A9] text-center'
-                    }}
-                    placeholder="연락받으실 곳을 남겨주세요"
-                    {...register('phone')}
-                    isInvalid={!!errors.phone}
-                    errorMessage={errors.phone?.message}
-                  />
+                    <Input
+                      classNames={{
+                        inputWrapper: 'bg-[#FFE5EF]',
+                        input: 'font-cafe24 text-xs placeholder:text-[#0088A9] text-center'
+                      }}
+                      placeholder="연락받으실 곳을 남겨주세요"
+                      {...register('phone')}
+                      isInvalid={!!errors.phone}
+                      errorMessage={errors.phone?.message}
+                    />
+                  </div>
 
                   <Textarea
-                    minRows={4}
+                    minRows={2}
                     classNames={{
                       inputWrapper: 'bg-[#FFE5EF]',
-                      input: 'font-cafe24 text-lg placeholder:text-[#0088A9]'
+                      input: 'font-cafe24 placeholder:text-[#0088A9]'
                     }}
                     placeholder="메세지를 전해주세요"
                     {...register('message')}
