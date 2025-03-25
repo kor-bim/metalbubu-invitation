@@ -110,7 +110,7 @@ export const GuestbookInputModal = ({ isOpen, onOpenChange, openListModal }) => 
                     fullWidth
                     size="lg"
                     color="danger"
-                    className="h-12 font-cafe24"
+                    className="h-10 font-cafe24"
                     type="submit"
                     isLoading={isSubmitting}
                   >
