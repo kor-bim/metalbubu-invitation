@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from 'react'
 import { Button } from '@heroui/button'
 import Image from 'next/image'
-import butterFlyImg from '@public/butterfly.webp'
+import butterFlyImg from '@public/butterflys.webp'
 import { Modal, ModalContent, useDisclosure } from '@heroui/modal'
 import { Card, CardBody } from '@heroui/card'
 import { Divider } from '@heroui/divider'
@@ -42,22 +42,24 @@ export const AccountSection = () => {
   return (
     <div className="relative w-full flex flex-col items-center justify-center px-4 bg-[url(/background.webp)] bg-no-repeat bg-cover">
       {/* 버튼 */}
-      <div className="absolute w-full flex items-center justify-center gap-8 px-14">
+      <div className="absolute w-full flex items-center justify-center gap-8 px-12">
         <Button
           fullWidth
           size="lg"
-          className="h-12 bg-[#DCFFF7] font-cafe24 text-xl text-[#0088A9]"
+          className="h-12 bg-[#DCFFF7] font-cafe24 text-[#0088A9] flex-col gap-0"
           onPress={() => openModal('groom')}
         >
-          신랑측
+          <span>신랑측</span>
+          <span className="text-xs">계좌번호</span>
         </Button>
         <Button
           fullWidth
           size="lg"
-          className="h-12 bg-[#DCFFF7] font-cafe24 text-xl text-[#0088A9]"
+          className="h-12 bg-[#DCFFF7] font-cafe24 text-[#0088A9] flex-col gap-0"
           onPress={() => openModal('bride')}
         >
-          신부측
+          <span>신부측</span>
+          <span className="text-xs">계좌번호</span>
         </Button>
       </div>
 
